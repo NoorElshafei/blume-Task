@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <LinearLayout
+        android:id="@+id/name_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:background="@drawable/shape_background"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/neusa_next_std_bold"
+            android:text="MK"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_17sdp" />
+
+
+    </LinearLayout>
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_toEndOf="@+id/name_icon"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_path_22"
+        app:srb_drawableFilled="@drawable/ic_path_18"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="0"
+        app:srb_numStars="5"
+        app:srb_rating="3"
+        app:srb_scrollable="true"
+        app:srb_starHeight="@dimen/_15sdp"
+        app:srb_starPadding="2dp"
+        app:srb_starWidth="@dimen/_15sdp"
+        app:srb_stepSize="1" />
+
+    <TextView
+        android:id="@+id/name_reviewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simpleRatingBar"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_toEndOf="@+id/name_icon"
+        android:fontFamily="@font/neusa_next_std_medium"
+        android:text="Mohamed Ahmed"
+        android:textColor="#EB839D"
+        android:textSize="@dimen/_9sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_reviewer"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/name_icon"
+        android:fontFamily="@font/neusa_next_std_light"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        android:ellipsize="end"
+        android:lines="1"
+
+        android:textColor="#EB839D"
+        android:textSize="@dimen/_9sdp" />
+
+</RelativeLayout>

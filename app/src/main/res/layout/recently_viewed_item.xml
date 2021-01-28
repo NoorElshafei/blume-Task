@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="@dimen/_50sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_width="@dimen/_150sdp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/image_item"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/recenly_viewed" />
+
+        <TextView
+            android:fontFamily="@font/neusa_next_std_light"
+            android:id="@+id/name_item"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_toEndOf="@+id/image_item"
+            android:layout_width="wrap_content"
+            android:text="Eba - Act"
+            android:textColor="#EB839D"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:fontFamily="@font/neusa_next_std_bold"
+            android:layout_below="@+id/name_item"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/image_item"
+            android:layout_width="wrap_content"
+            android:text="11.99 LE"
+            android:textColor="#EB839D"
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
