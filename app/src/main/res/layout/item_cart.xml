@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cart_image"
         android:layout_width="@dimen/_65sdp"
         android:layout_height="@dimen/_65sdp"
-        app:cardCornerRadius="@dimen/_33sdp"
-        app:cardElevation="10dp"
         android:layout_marginStart="@dimen/_24sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        >
+        app:cardCornerRadius="@dimen/_33sdp"
+        app:cardElevation="10dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/women_shoes"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/women_shoes" />
 
     </androidx.cardview.widget.CardView>
 
@@ -38,32 +37,46 @@
         android:textSize="@dimen/_10sdp" />
 
     <TextView
+        android:id="@+id/price_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name_type_cart"
         android:layout_marginStart="@dimen/_19sdp"
-        android:layout_marginBottom="@dimen/_6sdp"
-        android:fontFamily="@font/arial_bold"
-        android:layout_toEndOf="@+id/cart_image"
         android:layout_marginEnd="@dimen/_15sdp"
-        android:text="20.99 LE"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/cart_image"
         android:ellipsize="end"
+        android:fontFamily="@font/arial_bold"
         android:lines="1"
+        android:text="20.99 LE"
 
         android:textColor="#EB839D"
         android:textSize="@dimen/_12sdp" />
+
     <TextView
         android:id="@+id/name_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_toEndOf="@+id/cart_image"
         android:fontFamily="@font/arial_regular"
-        android:layout_marginTop="@dimen/_10sdp"
         android:text="EBA - ACT"
         android:textColor="#EB839D"
         android:textSize="@dimen/_12sdp" />
 
 
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/number_button"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/_19sdp"
+        app:backGroundColor="@color/colorAccent"
+        app:finalNumber="20"
+        app:initialNumber="1"
+        app:textSize="8sp"
 
+        />
 </RelativeLayout>

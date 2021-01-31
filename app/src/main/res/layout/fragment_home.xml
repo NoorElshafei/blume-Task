@@ -53,13 +53,36 @@
                 android:src="@drawable/ic_options" />
 
             <ImageView
-                android:id="@+id/cart"
+                android:id="@+id/cart_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
                 android:layout_toStartOf="@+id/option"
                 android:src="@drawable/ic_cart" />
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:backgroundTint="#EB839D"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/cart_number_homr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/neusa_next_std_bold"
+                    android:text="4"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_6sdp" />
+
+            </androidx.cardview.widget.CardView>
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -216,26 +239,46 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/search_editText"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/toolbar"
         android:layout_marginStart="40dp"
         android:layout_marginTop="-30dp"
         android:layout_marginEnd="40dp"
-        android:background="@drawable/raduis"
-        android:drawableRight="@drawable/ic_search"
-        android:drawablePadding="19dp"
-        android:elevation="8dp"
-        android:hint="Search for anything …"
-        android:inputType="text"
-        android:paddingLeft="21dp"
-        android:paddingRight="@dimen/_11sdp"
-        android:textColorHint="#EBC7D0"
-        android:textSize="@dimen/_11sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/raduis"
+            android:drawablePadding="19dp"
+            android:hint="Search for anything …"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="21dp"
+            android:paddingRight="@dimen/_11sdp"
+            android:textColorHint="#EBC7D0"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/search_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_search" />
+
+    </androidx.cardview.widget.CardView>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -244,7 +287,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:clipToPadding="false"
-        android:paddingTop="@dimen/_16sdp"
+        android:paddingTop="@dimen/_26sdp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:listitem="@layout/item_list" />

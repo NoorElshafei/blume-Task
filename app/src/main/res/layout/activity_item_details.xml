@@ -10,8 +10,9 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_5sdp"
         android:src="@drawable/ic_icon_navigation_chevron_left_24px" />
 
     <RelativeLayout
@@ -80,7 +81,7 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/option"
+        android:id="@+id/cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -90,12 +91,35 @@
         android:paddingEnd="@dimen/_5sdp"
         android:src="@drawable/ic_cart" />
 
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="@dimen/_11sdp"
+        android:layout_height="@dimen/_11sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_35sdp"
+        android:backgroundTint="#EB839D"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/cart_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/neusa_next_std_bold"
+                android:text="4"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_6sdp" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <ImageView
         android:id="@+id/item_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/option"
+        android:layout_below="@+id/cart"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_40sdp"
         android:src="@drawable/boots1" />
@@ -170,7 +194,6 @@
             android:id="@+id/details_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="0dp"
@@ -189,6 +212,7 @@
                     android:textColor="#EB839D"
                     android:textSize="@dimen/_9sdp" />
                 <TextView
+                    android:id="@+id/item_name1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_6sdp"
@@ -208,6 +232,7 @@
                     android:textColor="#EB839D"
                     android:textSize="@dimen/_9sdp" />
                 <TextView
+                    android:id="@+id/condition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_6sdp"
@@ -236,6 +261,7 @@
                     android:textColor="#EB839D"
                     android:textSize="@dimen/_9sdp" />
                 <LinearLayout
+                    android:id="@+id/cancel_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#EB839D"
@@ -295,6 +321,7 @@
                     android:textColor="#EB839D"
                     android:textSize="@dimen/_9sdp" />
                 <TextView
+                    android:id="@+id/material"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_60sdp"
@@ -324,6 +351,7 @@
                     android:textSize="@dimen/_9sdp" />
 
                 <LinearLayout
+                    android:id="@+id/add_to_cart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#EB839D"
@@ -353,6 +381,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/review_item"
+            android:visibility="gone"
             tools:itemCount="6"/>
 
     </LinearLayout>

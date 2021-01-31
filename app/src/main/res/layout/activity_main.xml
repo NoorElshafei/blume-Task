@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -72,7 +73,7 @@
                     />
 
                 <ImageView
-                    android:id="@+id/my_lesson"
+                    android:id="@+id/add_product"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_5ssp"
@@ -99,8 +100,30 @@
 
             </LinearLayout>
 
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="center"
+                app:cardElevation="10dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_20sdp"
+                >
+                <ImageView
+                    android:id="@+id/scanFram_image"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_real" />
+            </androidx.cardview.widget.CardView>
         </FrameLayout>
 
 
     </LinearLayout>
+
 </RelativeLayout>

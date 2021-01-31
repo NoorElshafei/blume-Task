@@ -11,8 +11,9 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_9sdp"
         android:src="@drawable/ic_icon_navigation_chevron_left_24px" />
 
     <TextView
@@ -23,6 +24,7 @@
         android:layout_marginTop="@dimen/_11sdp"
         android:layout_toEndOf="@+id/back"
         android:text="My Orders"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:textColor="#EB839D"
         android:textSize="@dimen/_19sdp" />
 
@@ -69,21 +71,21 @@
         android:layout_alignParentBottom="true"
         >
         <TextView
-            android:id="@+id/name_type_cart"
+            android:id="@+id/total_carts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name_cart"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_4sdp"
             android:fontFamily="@font/arial_bold"
-            android:text="83.96 LE"
+            android:text="0.0 LE"
             android:textColor="#EB839D"
             android:textSize="@dimen/_17sdp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name_type_cart"
+            android:layout_below="@+id/total_carts"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_6sdp"
             android:fontFamily="@font/arial_regular"

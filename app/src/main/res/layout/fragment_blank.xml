@@ -14,33 +14,61 @@
         android:elevation="2dp"
         app:contentInsetStart="0dp" />
 
-
-    <EditText
-        android:id="@+id/search_editText"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/toolbar"
         android:layout_marginStart="40dp"
         android:layout_marginTop="-30dp"
         android:layout_marginEnd="40dp"
-        android:background="@drawable/raduis"
-        android:drawableRight="@drawable/ic_search"
-        android:drawablePadding="19dp"
-        android:elevation="8dp"
-        android:hint="Search for anything …"
-        android:inputType="text"
-        android:paddingLeft="21dp"
-        android:paddingRight="@dimen/_11sdp"
-        android:textColorHint="#EBC7D0"
-        android:textSize="@dimen/_11sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/raduis"
+            android:drawablePadding="19dp"
+            android:hint="Search for anything …"
+            android:inputType="text"
+            android:paddingLeft="21dp"
+            android:paddingRight="@dimen/_11sdp"
+            android:textColorHint="#EBC7D0"
+            android:textSize="@dimen/_11sdp"
+            android:imeOptions="actionSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/search_action1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_search" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/search_layout"
+        tools:listitem="@layout/item_list"
+        android:visibility="gone"/>
 
     <LinearLayout
+        android:id="@+id/layout_recent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search_editText"
-        android:orientation="vertical">
+        android:layout_below="@+id/search_layout"
+        android:orientation="vertical"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -107,46 +135,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="end"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:gravity="end"
                 android:text="Skin care"
                 android:textColor="#EB839D"
                 android:textSize="@dimen/_8sdp" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text="Article"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:paddingStart="@dimen/_12sdp"
-                android:gravity="center_horizontal"
+                android:text="Article"
                 android:textColor="#EB839D"
                 android:textSize="@dimen/_8sdp" />
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text="Lips"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:paddingEnd="@dimen/_12sdp"
-                android:gravity="center_horizontal"
+                android:text="Lips"
                 android:textColor="#EB839D"
                 android:textSize="@dimen/_8sdp" />
+
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text="Videos"
+                android:layout_weight="1"
                 android:gravity="start"
+                android:text="Videos"
                 android:textColor="#EB839D"
                 android:textSize="@dimen/_8sdp" />
 

@@ -12,6 +12,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         my_order.setOnClickListener(this)
+        back.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -19,6 +20,9 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
             my_order ->{
                 val intent = Intent(this,MyOrderActivity::class.java)
                 startActivity(intent)
+            }
+            back ->{
+                onBackPressed()
             }
 
         }

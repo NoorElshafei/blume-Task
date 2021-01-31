@@ -11,18 +11,20 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class ItemAdapter(
+class SearchProductAdapter(
     var context: Context?,
-    var ref: DatabaseReference
-) : FirebaseRecyclerAdapter<Products, ItemAdapter.ProductsViewHolder>(
+    var ref: DatabaseReference?,
+    var text: String?
+) : FirebaseRecyclerAdapter<Products, SearchProductAdapter.SearchViewHolder>(
     Products::
-    class.java, R.layout.item_list, ProductsViewHolder::
-    class.java, ref
+    class.java, R.layout.item_list, SearchViewHolder::
+    class.java, ref!!.orderByChild("name").startAt(text)
+        .endAt(text + "\uf8ff")
 ) {
 
 
     override fun populateViewHolder(
-        holder: ProductsViewHolder?,
+        holder: SearchViewHolder?,
         product: Products?,
         position: Int
     ) {
@@ -38,7 +40,7 @@ class ItemAdapter(
         }
     }
 
-    class ProductsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
 }
